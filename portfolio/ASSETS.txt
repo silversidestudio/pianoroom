@@ -1,0 +1,20 @@
+ASSET PROVENANCE — PIANO ROOM DESIGN CONCEPT
+
+Production assets are local. No stock photographs, third-party icons, audio
+recordings, web fonts, analytics or remote libraries are used.
+
+Architectural illustration, favicon, score graphics and social card:
+original code-generated artwork created for this concept within this project.
+No external source artwork was incorporated. This records provenance, not a
+guarantee of exclusivity or a legal opinion on AI-assisted work.
+
+Typography: installed system font stack (Arial, Georgia, Courier New and
+platform fallbacks); font files are not copied, embedded or redistributed.
+The social card rasterises installed system fonts; no font software is supplied.
+
+Piano audio: generated at runtime with Web Audio oscillators; no recorded samples.
+The guided C E G E C phrase is an original short exercise for this concept.
+Portfolio screenshots capture the finished concept and are outside dist.
+
+No third-party asset with unknown usage rights was found in the current output.
+Earlier Unsplash imagery is absent from this version.

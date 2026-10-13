@@ -1,0 +1,7 @@
+Fresh desktop and mobile screenshots are pending browser access.
+This folder deliberately contains no earlier-version images labelled as final.
+See ../QA.txt for the approval blocker.
+Suggested final captures: desktop.jpg (1440 px wide), mobile.jpg (390 px wide),
+and optional desktop-full.jpg / mobile-full.jpg. Use a clean reset piano state
+and the final concept footer. Screenshots are portfolio materials, not deployable
+assets, and must remain outside dist.

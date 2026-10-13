@@ -1,0 +1,62 @@
+PIANO ROOM — LOCAL CREATIVE REDESIGN
+
+Inspection
+The existing site was one buildless HTML page with inline CSS and JavaScript.
+There were no internal pages, framework, database or installed dependencies.
+Preserved section routes: #lessons, #approach, #faq. Preserved the playable
+piano, all three lesson pathways, FAQ content and downloadable lesson enquiry.
+No production deployment or hosting changes were made for this redesign.
+
+Three creative directions considered
+1. The Concert Programme: theatrical black-and-white layouts and programme
+   typography. Strong cultural fit and easy implementation, but less welcoming
+   and less interactive than the alternatives.
+2. The Practice Room: architectural spatial composition and intimate tactile
+   detail. Distinctive and suitable, but a fully immersive room would make
+   mobile navigation and implementation disproportionately complex.
+3. The Living Score: an editorial composition built around making music.
+   Strong visual impact, high usability and feasible in plain HTML/CSS/JS.
+   Selected because visitors participate in the identity and experience a
+   small first lesson, connecting its originality directly to the school.
+
+Identity and composition
+Paper, ink and vermilion; large plain typography in dialogue with italic type;
+asymmetric line breaks; small programme annotations. Rhythm is expressed
+through changes of scale, density and spacing. The live score, programme-like
+lesson entries and original architectural SVG all derive from the concept.
+No stock photography, external fonts, paid services or added dependencies.
+System fonts make this version entirely self-contained and fast to load.
+
+Changed components
+Homepage opening, navigation, interactive piano and visual score, guided
+five-note lesson, replay/reset, lesson pathways, approach, interlude, FAQs,
+closing enquiry, footer and enquiry modal. Split CSS and JS into local files.
+No internal pages were added simply to expand the scope.
+
+Creative refinement
+Reviewed the full desktop and phone compositions. Corrected mobile headline
+overflow and joined words from hidden breaks. Scaled the score to the device.
+Retained navigation on phones; adapted lessons to a compact two-line programme.
+Adjusted keyboard shortcuts to work after a piano button receives focus.
+
+QA performed
+Browser inspection at 1440, 768, 390 and 320 pixels. No horizontal page overflow.
+Piano clicks, physical keyboard shortcuts, score generation, replay and reset.
+Guided phrase completed with C E G E C and success feedback verified.
+Lesson enquiry selection, form submission, downloaded text file and edit flow.
+FAQ expansion and hash navigation. No browser console errors observed.
+JavaScript syntax checked. Native semantic controls, labelled modal and inputs,
+focus indication, focus return, Escape dismissal and reduced-motion CSS.
+
+Limits
+School is fictional. Real contact details, pricing, teachers and schedule are
+not supplied. Enquiries download locally; they do not submit a booking.
+Piano uses synthesized harmonics rather than sampled acoustic piano audio.
+Visual score is an expressive trace, not a formal sheet-music transcription.
+Browser tests used the available in-app Chromium browser; separate Safari,
+Firefox, physical-device and screen-reader audits have not been performed.
+
+View locally
+http://127.0.0.1:4173/
+If the server is stopped, from this project directory run:
+python3 -m http.server 4173 --bind 127.0.0.1 --directory dist

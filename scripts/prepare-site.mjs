@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const args=process.argv.slice(2);
+if(args.length!==2||args[0]!=='--url')throw new Error('Usage: node scripts/prepare-site.mjs --url <confirmed HTTPS directory URL>');
+const url=new URL(args[1]);
+if(url.protocol!=='https:'||url.username||url.password||url.search||url.hash)throw new Error('Use the confirmed public HTTPS URL without credentials, query or fragment');
+if(!url.pathname.endsWith('/'))url.pathname+='/';
+const file=path.resolve(import.meta.dirname,'../dist/index.html');
+let html=fs.readFileSync(file,'utf8');
+const esc=s=>s.replaceAll('&','&amp;').replaceAll('"','&quot;');
+const image=esc(new URL('social-card.png',url).href);
+html=html.replace(/(<meta property="og:image" content=")[^"]*/,'$1'+image);
+html=html.replace(/(<meta name="twitter:image" content=")[^"]*/,'$1'+image);
+html=html.replace(/<meta property="og:url" content="[^"]*">\n?/g,'');
+html=html.replace('</head>','<meta property="og:url" content="'+esc(url.href)+'">\n</head>');
+fs.writeFileSync(file,html);
+console.log('Sharing metadata prepared for '+url.href+'; no deployment performed.');

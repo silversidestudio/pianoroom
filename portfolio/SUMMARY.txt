@@ -1,0 +1,23 @@
+DESIGN CONCEPT — PIANO ROOM
+
+A self-initiated website concept for a fictional UK piano school, created by
+Silverside Web Solutions. The brief was to make starting piano feel inviting
+while giving the school an identity rooted in music rather than a generic
+education template.
+
+The Living Score visual direction combines paper-white space, ink-black type,
+vermilion accents, oversized editorial headlines and an original architectural
+illustration. A playable piano lets visitors leave a visual trace on the page;
+replay and a short guided phrase turn the opening into a musical experience.
+
+Implemented features include responsive lesson pathways, keyboard and touch
+piano controls, a switch for character-key shortcuts, a five-note guided lesson,
+composition replay/reset, accessible FAQs and a clearly labelled enquiry demo.
+The enquiry uses preset choices and produces a sample response and optional
+text download. It sends no messages, makes no bookings, takes no payments and
+requests no personal information.
+
+This is a design concept, not commissioned client work. No trading school,
+teacher credentials, customer testimonials or measured results are claimed.
+The piano is synthesised; the visual score is expressive rather than formal
+sheet-music transcription.

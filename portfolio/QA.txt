@@ -1,0 +1,43 @@
+PIANO ROOM — VERIFICATION STATUS
+12 October 2026
+
+PASSED
+- Static validation: local asset references, unique IDs, existing fragment links,
+  form labels/accessible descriptions, noindex/follow, concept attribution,
+  SVG favicon, 1200 x 630 PNG sharing image and existing static hosting manifest.
+- JavaScript syntax: production app and metadata preparation script.
+- Isolated JS behaviour tests: piano keys, score generation, replay/reset,
+  character-key toggle, guided phrase including wrong-note handling/cancellation,
+  modal lesson selection/focus return, demo response, edit choices and text download.
+- The demo has no free-text personal fields, network submission, payment controls,
+  client storage or transmission API. Choices are predefined examples.
+- Local HTTP preview returns 200. Silverside external link resolved via web check.
+- Production ZIP verified: six expected files at its root, archive integrity passed.
+- Production output approximately 77 KB, no asset exceeds 500 KB.
+- Colour-pair calculation found two small-text issues in the original design.
+  Active key labels now use white on the darker red (over 4.5:1).
+  Interlude annotations use near-black on vermilion (over 4.5:1).
+  Existing paper/red text is 4.68:1. Focus indicators, reduced-motion rule and
+  keyboard shortcut opt-out are present in the source.
+
+BLOCKED / NOT VERIFIED FOR THIS FINAL VERSION
+- Fresh browser layout checks at desktop, tablet and phone widths.
+- Live keyboard traversal, native select/dialog rendering, computed-style contrast,
+  reduced-motion behaviour, actual audio output and console inspection.
+- Clean desktop/mobile portfolio screenshots have NOT been captured.
+  Do not use older root screenshots/ files as captures of this final version.
+- In-app browser unavailable in this session. Firefox Computer Use access was
+  rejected by automatic approval review: not approved to use Firefox.
+  Browser approval was requested; it had not been received at handoff.
+- Previous browser checks documented in DESIGN.txt concern the earlier version,
+  not the final portfolio changes.
+
+COMMANDS
+node scripts/check-site.mjs
+node scripts/test-interactions.mjs
+python3 scripts/package-site.py
+
+PUBLICATION
+No deployment, audience change, new platform registration or main Silverside
+website modification was performed. The final public URL and destination must
+be confirmed before absolute social-sharing metadata and publication.

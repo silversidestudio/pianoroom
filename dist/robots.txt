@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Indexing is controlled by the noindex, follow meta tag in index.html.

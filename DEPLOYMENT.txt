@@ -1,0 +1,54 @@
+PIANO ROOM — HOSTING HANDOFF
+
+Confirmed public URL: https://pianoroom.concepts.silverside.co/
+Status: user-hosted externally; metadata prepared locally. No deployment performed by this task.
+The main Silverside website has not been modified.
+
+Architecture: buildless static HTML, CSS and vanilla JavaScript.
+Production directory: dist/
+Build/verification command: node scripts/check-site.mjs
+Interaction check: node scripts/test-interactions.mjs
+Packaging command: python3 scripts/package-site.py
+The ZIP contains the contents of dist at its root.
+No install steps, backend services, environment secrets or databases.
+
+Existing Sites identity is preserved in .openai/hosting.json:
+appgprj_6ac91f26d1848191ba486be08b1e62ea
+static.directory remains dist. Audience and live site were not changed.
+The root site.tar.gz is a historical archive, NOT the current output.
+Use dist/ or the freshly prepared artifacts/piano-room-concept.zip.
+Keep portfolio/, scripts/, screenshots/, .git/ and documentation out of hosting.
+
+Serve index.html at the selected root or directory URL. Assets use relative
+paths, so subdirectory hosting is supported. Routes are fragments (#lessons,
+#approach, #faq, #play); no SPA rewrite or server routes are needed. Missing
+resources should return 404. Serve HTML/CSS/JS/SVG/PNG with standard MIME types.
+HTTPS is recommended. No third-party requests are needed.
+
+Metadata identifies a fictional design concept. Meta robots is noindex, follow.
+robots.txt allows crawling so crawlers can read that directive; do not add a
+Disallow rule that prevents reading noindex. noindex is not access control.
+
+Absolute sharing metadata is configured for the confirmed URL:
+node scripts/prepare-site.mjs --url https://pianoroom.concepts.silverside.co/
+Then run node scripts/check-site.mjs and python3 scripts/package-site.py.
+Upload the contents of dist or extract the current ZIP into the confirmed site document root.
+No canonical URL is set in advance; no school structured data is used.
+Some social platforms require a final absolute image URL to fetch previews.
+
+The Sites project is retained as historical deployment metadata. The confirmed
+public concept is hosted separately by the user. Do not deploy to the earlier
+chatgpt.site project when updating this public address.
+
+Local preview:
+python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
+http://127.0.0.1:4173/
+The screenshot helper is local development tooling, not a site backend.
+
+The public URL and audience are confirmed. Server upload access has not been
+provided; upload the revised package manually. This task did not change the
+live files or the main Silverside website.
+Fresh browser QA and portfolio screenshots are pending Firefox approval.
+See portfolio/QA.txt; this is not yet a fully browser-verified publication handoff.
+Separate Safari/Firefox, physical-device and screen-reader audits remain outside
+the available Chromium browser verification.
